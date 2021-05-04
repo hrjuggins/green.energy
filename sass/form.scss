@@ -1,0 +1,52 @@
+.form {
+  margin: 2em 0 0;
+  label {
+    color: #8b8a8b;
+    display: flex;
+    align-items: center;
+  }
+  input[type="email"] {
+    height: 45px;
+    border: 1px solid #e4e3e4 !important;
+    border-radius: 5px;
+    margin: 0.625em 0;
+    width: 100%;
+    text-indent: 15px;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  & + label {
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+  }
+  & + label:before {
+    content: "";
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 1.2em;
+    height: 1.2em;
+    background: white;
+    border: 1px solid #e4e3e4 !important;
+    border-radius: 5px;
+  }
+  &:checked + label:before {
+    background: #38aae0;
+  }
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+  }
+}
