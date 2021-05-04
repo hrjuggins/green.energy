@@ -4,8 +4,6 @@ const App = () => {
   const [formState, setFormState] = useState({ email: "", remember: false });
 
   const handleInputChange = e => {
-    console.log(e);
-
     if (e.target.type === "checkbox") {
       setFormState(prevState => ({
         ...prevState,
@@ -23,8 +21,6 @@ const App = () => {
     e.preventDefault();
     alert(`Welcome ${formState.email}!`);
   };
-
-  console.log(formState.remember);
 
   return (
     <div className="container">
